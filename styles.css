@@ -264,3 +264,15 @@ section {
 .card {
     animation: fadeInUp 0.5s ease-out;
 }
+
+/* Футер */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+}
+
+footer p {
+    color: white;
+    text-align: center;
+}
