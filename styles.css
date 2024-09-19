@@ -1,0 +1,266 @@
+/* Основные стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 2rem;
+}
+
+#intro .intro-images {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+#intro .intro-images img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Сетка для карточек снаряжения */
+#gear .gear-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.gear-card {
+    background-color: #f4f4f4;
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gear-card:hover {
+    transform: scale(1.03); /* Увеличение при наведении */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Более выраженная тень */
+}
+
+.gear-card img {
+    width: 120px;
+    height: auto;
+}
+
+.gear-card h3 {
+    margin: 1rem 0 0.5rem;
+    color: #333;
+}
+
+.gear-card p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Одежа и обувь */
+#clothing-footwear {
+    margin-top: 2rem;
+}
+
+.clothing-footwear-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.clothing, .footwear {
+    background-color: #f4f4f4;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.clothing:hover, .footwear:hover {
+    transform: scale(1.03); /* Увеличение при наведении */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Более выраженная тень */
+}
+
+.clothing h3, .footwear h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.clothing p, .footwear p {
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+    .clothing-footwear-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Правила поведения */
+#rules .rules-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Три колонки на больших экранах */
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.rules-card {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rules-card:hover {
+    transform: scale(1.03); /* Увеличение при наведении */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Более выраженная тень */
+}
+
+.rules-card img.rules-image {
+    width: 100%;
+    height: 200px; /* Установлена фиксированная высота */
+    object-fit: cover; /* Изображения масштабируются с сохранением пропорций */
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    transition: opacity 0.3s ease;
+}
+
+.rules-card:hover img.rules-image {
+    opacity: 0.8; /* Изменение прозрачности при наведении */
+}
+
+.rules-card h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.rules-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.rules-card ul li {
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 1024px) {
+    #rules .rules-grid {
+        grid-template-columns: repeat(2, 1fr); /* Две колонки на средних экранах */
+    }
+}
+
+@media (max-width: 768px) {
+    #rules .rules-grid {
+        grid-template-columns: 1fr; /* Одна колонка на маленьких экранах */
+    }
+}
+
+/* Предупреждение о нарушении законов */
+#legal-warning {
+    margin-top: 2rem;
+}
+
+.legal-warning-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Три колонки на больших экранах */
+    gap: 1.5rem;
+}
+
+.legal-warning-card {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.legal-warning-card:hover {
+    transform: scale(1.03); /* Увеличение при наведении */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Более выраженная тень */
+}
+
+.legal-warning-card h3 {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    color: #333;
+}
+
+.legal-warning-card h4 {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.legal-warning-card ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0.5rem;
+}
+
+.legal-warning-card ul li {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 1024px) {
+    .legal-warning-container {
+        grid-template-columns: repeat(2, 1fr); /* Две колонки на средних экранах */
+    }
+}
+
+@media (max-width: 768px) {
+    .legal-warning-container {
+        grid-template-columns: 1fr; /* Одна колонка на маленьких экранах */
+    }
+}
+
+/* Анимация при загрузке */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    animation: fadeInUp 0.5s ease-out;
+}
