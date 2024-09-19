@@ -164,10 +164,6 @@ section {
     transition: opacity 0.3s ease;
 }
 
-.rules-card:hover img.rules-image {
-    opacity: 0.8; /* Изменение прозрачности при наведении */
-}
-
 .rules-card h3 {
     font-weight: 700;
     margin-bottom: 1rem;
