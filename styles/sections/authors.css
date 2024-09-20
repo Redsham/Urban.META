@@ -1,0 +1,42 @@
+/* Авторы */
+
+.authors-grid {
+    display: flex;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.author-card {
+    background-color: #f4f4f4;
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.author-card:hover {
+    transform: scale(1.03); /* Увеличение при наведении */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Более выраженная тень */
+}
+
+.author-avatar {
+    width: 150px; /* Размер аватарки */
+    height: 150px; /* Размер аватарки */
+    border-radius: 50%; /* Круглая форма */
+    object-fit: cover; /* Сохранение пропорций */
+    margin-bottom: 1rem;
+}
+
+.author-card h3 {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.author-card p {
+    font-size: 0.9rem;
+    color: #666;
+}

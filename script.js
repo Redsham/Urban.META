@@ -57,3 +57,11 @@ function close() {
         modal.style.display = "none";
     }, 250);
 }
+
+window.addEventListener('scroll', function() {
+    const section = document.getElementById('intro');
+    const scrollPosition = window.scrollY;
+    
+    // Изменение прозрачности в зависимости от прокрутки
+    section.style.opacity = 1 - scrollPosition / 500;
+});

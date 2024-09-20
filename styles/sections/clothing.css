@@ -1,0 +1,41 @@
+/* Одежа и обувь */
+#clothing-footwear {
+    margin-top: 2rem;
+}
+
+.clothing-footwear-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.clothing, .footwear {
+    background-color: #f4f4f4;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.clothing:hover, .footwear:hover {
+    transform: scale(1.03); /* Увеличение при наведении */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Более выраженная тень */
+}
+
+.clothing h3, .footwear h3 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.clothing p, .footwear p {
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+    .clothing-footwear-container {
+        grid-template-columns: 1fr;
+    }
+}

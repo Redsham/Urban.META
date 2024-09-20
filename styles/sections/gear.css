@@ -1,0 +1,43 @@
+/* Сетка для карточек снаряжения */
+#gear .gear-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.gear-card {
+    background-color: #f4f4f4;
+    padding: 1.5rem;
+    padding-bottom: 0.1rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gear-card:hover {
+    transform: scale(1.03); /* Увеличение при наведении */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Более выраженная тень */
+}
+
+.gear-card img {
+    width: 120px;
+    height: auto;
+}
+
+.gear-card h3 {
+    font-weight: 700;
+    margin: 1rem 0 0.5rem;
+    color: #333;
+}
+
+.gear-card .hint {
+    font-weight: 300;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.gear-card p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+}

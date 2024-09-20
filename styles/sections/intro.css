@@ -1,0 +1,77 @@
+#intro {
+    height: 100vh;
+    background-image: url('../../images/background.jpg'); /* Замените на вашу картинку */
+    background-size: cover;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.fullscreen-nav {
+    width: auto;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.fullscreen-nav h1 {
+    color: white;
+    font-size: 5rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.fullscreen-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.fullscreen-nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.fullscreen-nav ul li a {
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border: 2px solid white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+
+    backdrop-filter: blur(2px);
+}
+
+.fullscreen-nav ul li a:hover {
+    background-color: white;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .fullscreen-nav h1 {
+        font-size: 3em;
+        padding: 0 20px;
+    }
+
+    .fullscreen-nav ul {
+        display: block;
+        padding: 0;
+    }
+
+    .fullscreen-nav ul li {
+        display: flex;
+        margin: 10px 0;
+    }
+
+    .fullscreen-nav ul li a {
+        font-size: 1rem;
+        padding: 10px;
+        width: 100%; /* Делает ссылки блоком, чтобы они растягивались на всю ширину */
+    }
+}

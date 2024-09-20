@@ -1,0 +1,104 @@
+/* Предупреждение о нарушении законов */
+#legal-warning {
+    margin-top: 2rem;
+}
+
+.legal-warning-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Три колонки на больших экранах */
+    gap: 1.5rem;
+}
+
+.legal-warning-card {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.legal-warning-card:hover {
+    transform: scale(1.03); /* Увеличение при наведении */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Более выраженная тень */
+}
+
+.legal-warning-card h3 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    color: #333;
+}
+
+.legal-warning-card h4 {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.legal-warning-card ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0.5rem;
+}
+
+.legal-warning-card ul li {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.legal-warning-hint {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 2rem;
+}
+
+.legal-warning-hint:hover {
+    transform: scale(1.03); /* Увеличение при наведении */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Более выраженная тень */
+}
+
+.legal-warning-hint img {
+    margin-right: 2rem;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.legal-warning-hint h3 {
+    font-weight: 700;
+    margin: 1rem 0 0.5rem;
+    color: #333;
+}
+
+.legal-warning-hint p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+@media (max-width: 1024px) {
+    .legal-warning-container {
+        grid-template-columns: repeat(2, 1fr); /* Две колонки на средних экранах */
+    }
+}
+
+@media (max-width: 768px) {
+    .legal-warning-container {
+        grid-template-columns: 1fr; /* Одна колонка на маленьких экранах */
+    }
+    .legal-warning-hint {
+        grid-template-columns: 1fr;
+    }
+    .legal-warning-hint img {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1rem;
+    }
+}
