@@ -2,7 +2,6 @@
     height: 100vh;
     background-image: url('../../images/background.jpg');
     background-size: cover;
-    background-size: cover;
     background-position: center;
     display: flex;
     justify-content: center;
@@ -19,16 +18,16 @@
 }
 
 .fullscreen-nav h1 {
+    height: auto;
+    margin: 0;
     color: white;
     font-size: 5rem;
-    margin-bottom: 1.5rem;
     text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 .fullscreen-nav ul {
     list-style: none;
     padding: 0;
-    margin: 0;
 }
 
 .fullscreen-nav ul li {

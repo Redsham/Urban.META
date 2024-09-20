@@ -63,5 +63,5 @@ window.addEventListener('scroll', function() {
     const scrollPosition = window.scrollY;
     
     // Изменение прозрачности в зависимости от прокрутки
-    section.style.opacity = 1 - scrollPosition / 500;
+    section.style.opacity = Math.max(1 - scrollPosition / 500, 0)**2;
 });
