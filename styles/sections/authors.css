@@ -1,9 +1,9 @@
 /* Авторы */
 
 .authors-grid {
-    display: flex;
+    display: grid;
     justify-content: center;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: auto auto;
     gap: 1.5rem;
 }
 
@@ -18,15 +18,15 @@
 }
 
 .author-card:hover {
-    transform: scale(1.03); /* Увеличение при наведении */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Более выраженная тень */
+    transform: scale(1.03);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .author-avatar {
-    width: 150px; /* Размер аватарки */
-    height: 150px; /* Размер аватарки */
-    border-radius: 50%; /* Круглая форма */
-    object-fit: cover; /* Сохранение пропорций */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
     margin-bottom: 1rem;
 }
 
@@ -39,4 +39,16 @@
 .author-card p {
     font-size: 0.9rem;
     color: #666;
+}
+
+@media (max-width: 768px) {
+    .authors-grid {
+        grid-template-columns: 1fr;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .author-card {
+        width: auto;
+    }
 }

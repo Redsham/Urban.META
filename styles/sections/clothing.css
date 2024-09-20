@@ -1,4 +1,5 @@
 /* Одежа и обувь */
+
 #clothing-footwear {
     margin-top: 2rem;
 }
@@ -18,8 +19,8 @@
 }
 
 .clothing:hover, .footwear:hover {
-    transform: scale(1.03); /* Увеличение при наведении */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Более выраженная тень */
+    transform: scale(1.03);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .clothing h3, .footwear h3 {

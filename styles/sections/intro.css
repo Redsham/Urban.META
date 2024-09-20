@@ -53,8 +53,12 @@
 }
 
 @media (max-width: 768px) {
+    .fullscreen-nav {
+        width: 90%;
+    }
+
     .fullscreen-nav h1 {
-        font-size: 3em;
+        font-size: 10vw;
         padding: 0 20px;
     }
 
@@ -65,7 +69,8 @@
 
     .fullscreen-nav ul li {
         display: flex;
-        margin: 10px 0;
+        margin: 10px auto;
+        max-width: 300px;
     }
 
     .fullscreen-nav ul li a {
