@@ -145,7 +145,6 @@ section {
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -155,20 +154,36 @@ section {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Более выраженная тень */
 }
 
-.rules-card img.rules-image {
+.rules-card-header {
+    position: relative;
+    display: block;
+}
+
+.rules-card-header img {
     width: 100%;
     height: 200px; /* Установлена фиксированная высота */
     object-fit: cover; /* Изображения масштабируются с сохранением пропорций */
     border-radius: 10px;
     margin-bottom: 1rem;
-    transition: opacity 0.3s ease;
 }
 
-.rules-card h3 {
+.rules-card-header h3 {
+    position: absolute;
+    padding: 10px;
+    bottom: 2rem;
+    right: 2rem;
+
+    color: white;
+    font-size: 1.4rem;
     font-weight: 700;
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
-    color: #333;
+
+    background-color: rgba(0, 0, 0, 0.466);
+    backdrop-filter: blur(2px);
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .rules-card ul {
@@ -249,11 +264,65 @@ section {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-height: 400px) {
+    .legal-warning-container {
+        grid-template-columns: 1fr; /* Одна колонка на очень низких экранах */
+    }
+}
+
+@media (max-width: 1024px) {
     .legal-warning-container {
         grid-template-columns: 1fr; /* Одна колонка на маленьких экранах */
     }
 }
+
+/* Авторы */
+
+#authors {
+    padding: 2rem;
+}
+
+.authors-grid {
+    display: flex;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.author-card {
+    background-color: #f4f4f4;
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.author-card:hover {
+    transform: scale(1.03); /* Увеличение при наведении */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Более выраженная тень */
+}
+
+.author-avatar {
+    width: 150px; /* Размер аватарки */
+    height: 150px; /* Размер аватарки */
+    border-radius: 50%; /* Круглая форма */
+    object-fit: cover; /* Сохранение пропорций */
+    margin-bottom: 1rem;
+}
+
+.author-card h3 {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.author-card p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
 
 /* Анимация при загрузке */
 @keyframes fadeInUp {
