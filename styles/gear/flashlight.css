@@ -1,0 +1,26 @@
+/* Стили для списка магазинов в модальном окне */
+.store-list {
+    list-style-type: none;
+    padding-left: 0;
+    column-count: 3; /* Распределение на 3 столбца */
+    column-gap: 20px; /* Отступы между столбцами */
+}
+
+.store-list li {
+    margin-bottom: 10px;
+}
+
+.store-list a {
+    text-decoration: none;
+    color: #0066cc;
+}
+
+.store-list a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+    .store-list {
+        column-count: 2;
+    }
+}

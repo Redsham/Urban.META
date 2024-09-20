@@ -63,6 +63,7 @@ section {
 .gear-card {
     background-color: #f4f4f4;
     padding: 1.5rem;
+    padding-bottom: 0.1rem;
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -83,6 +84,12 @@ section {
     font-weight: 700;
     margin: 1rem 0 0.5rem;
     color: #333;
+}
+
+.gear-card .hint {
+    font-weight: 300;
+    font-size: 0.9rem;
+    color: #666;
 }
 
 .gear-card p {
@@ -277,10 +284,6 @@ section {
 }
 
 /* Авторы */
-
-#authors {
-    padding: 2rem;
-}
 
 .authors-grid {
     display: flex;

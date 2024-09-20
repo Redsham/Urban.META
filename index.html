@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Urban.META</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/modal.css">
 </head>
 <body>
     <header>
@@ -33,7 +34,7 @@
     <section id="gear">
         <h2>Снаряжение</h2>
         <div class="gear-grid">
-            <div class="gear-card">
+            <div data-file="gear/flashlight.html" class="gear-card">
                 <img src="images/gear/flashlight-icon.png" alt="Фонарь">
                 <h3>Фонарь</h3>
                 <p>Надёжный фонарь — это важнейший инструмент для заброшек. Лучше иметь два: налобный и ручной. Обязательно запасной комплект аккумуляторов.</p>
@@ -218,11 +219,21 @@
                 <p>Автор текста, иллюстраций и идеи</p>
             </div>
         </div>
-    </section>    
+    </section>
+
+    <!-- Модальное окно для показа информации о снаряжении -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
     
     <footer>
         <p>Автор не несёт ответственности за чужие поступки и никого ни к чему не призывает.</p>
         <p>© 2024 Urban.META. Все права защищены.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
