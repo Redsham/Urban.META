@@ -38,6 +38,14 @@ document.querySelector('.close').onclick = close;
 window.onclick = function(event) {
     if (event.target != modal)
         return;
+    
+    close();
+}
+
+window.ontouchstart = function(event) {
+    if (event.target != modal)
+        return;
+
     close();
 }
 
